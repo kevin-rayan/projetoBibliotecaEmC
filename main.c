@@ -10,9 +10,7 @@ typedef struct cliente{
 typedef struct livro{
     char autor[100];
     char titulo[100];
-    char editora[100];
     int ano;
-    int id_livro;
     } t_livro;
     
 t_cliente clientes[100];
@@ -52,7 +50,7 @@ void adicionarLivro(){
     	scanf("%d", &posicaoLivro);
     	if(posicaoLivro >= 0 && posicaoLivro <= 99){
         	printf("Digite o titulo do livro a ser cadastrado: ");
-        	scanf("%s", &livros[posicaoLivro].titulo);
+			scanf("%s", &livros[posicaoLivro].titulo);
         	printf("Digite o autor do livro a ser cadastrado: ");
         	scanf("%s", &livros[posicaoLivro].autor);
         	printf("Digite o ano de lançamento do livro a ser cadastrado: ");
