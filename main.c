@@ -17,7 +17,6 @@ typedef struct livro{
     
 t_cliente clientes[100];
 t_livro livros[100];
-int contadorID = 0;
 
 void cadastrarCliente(){
     int respostaCliente = 0;
@@ -125,7 +124,7 @@ void exibirClientes(){
     menu();
 }
 
-int menu(){
+void menu(){
     int op;
     
     printf("\t\t\t\tBIBLIOTECA DO LEONARDO\t\t\t\t");
