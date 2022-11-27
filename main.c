@@ -25,7 +25,8 @@ void cadastrarCliente(){
         scanf("%d", &posicao);
         if(posicao >= 0 && posicao <= 99){
         printf("Digite o nome do novo cliente: ");
-        scanf("%s", &clientes[posicao].nome);
+        fflush(stdin);
+        gets(clientes[posicao].nome);
         printf("Digite a idade do novo cliente: ");
         scanf("%d", &clientes[posicao].idade);
         printf("<<Deseja cadastrar outro cliente?>>\n\n(1) - Sim\n(2) - Não\n");
@@ -50,9 +51,11 @@ void adicionarLivro(){
     	scanf("%d", &posicaoLivro);
     	if(posicaoLivro >= 0 && posicaoLivro <= 99){
         	printf("Digite o titulo do livro a ser cadastrado: ");
-			scanf("%s", &livros[posicaoLivro].titulo);
+        	fflush(stdin);
+        	gets(livros[posicaoLivro].titulo);
         	printf("Digite o autor do livro a ser cadastrado: ");
-        	scanf("%s", &livros[posicaoLivro].autor);
+        	fflush(stdin);
+        	gets(livros[posicaoLivro].autor);
         	printf("Digite o ano de lançamento do livro a ser cadastrado: ");
         	scanf("%d", &livros[posicaoLivro].ano);
         	printf("<<Gostaria de adicionar mais um livro?>>\n\n(1) - Sim\n(2) - Não\n");
@@ -87,16 +90,18 @@ void editarLivro(){
     }
      scanf("%d", &idEditado);
      if (idEditado >= 0 && idEditado <= 99){
-        printf("Qual das seguintes características você deseja editar?\n(1) -Título\n(2) - Autor\n(3) - Data de lançamento\n");
+        printf("Qual das seguintes características você deseja editar?\n(1) - Título\n(2) - Autor\n(3) - Data de lançamento\n");
         scanf("%d", &escolha);
     
         if(escolha == 1){
             printf("Insira o novo título: ");
-            scanf("%s", &livros[idEditado].titulo);
+            fflush(stdin);
+        	gets(livros[idEditado].titulo);
         } 
         else if (escolha == 2){
             printf("Insira o novo autor: ");
-            scanf("%s", &livros[idEditado].autor);
+            fflush(stdin);
+        	gets(livros[idEditado].autor);
         }
         else if (escolha == 3){
             printf("Insira a nova data de lançamento: ");
